@@ -1,7 +1,7 @@
 package com.campusenroll.notification.dto;
 
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 public class PaymentEvent {
 
@@ -12,7 +12,7 @@ public class PaymentEvent {
     private Long studentId;
     private BigDecimal amount;
     private String status;
-    private OffsetDateTime occurredAt;
+    private LocalDateTime occurredAt;
 
     public String getEventId() {
         return eventId;
@@ -70,11 +70,11 @@ public class PaymentEvent {
         this.status = status;
     }
 
-    public OffsetDateTime getOccurredAt() {
+    public LocalDateTime getOccurredAt() {
         return occurredAt;
     }
 
-    public void setOccurredAt(OffsetDateTime occurredAt) {
+    public void setOccurredAt(LocalDateTime occurredAt) {
         this.occurredAt = occurredAt;
     }
 }
