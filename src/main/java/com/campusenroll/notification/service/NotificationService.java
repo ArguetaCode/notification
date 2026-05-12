@@ -62,6 +62,10 @@ public class NotificationService {
         return notificationRepository.findByStudentIdOrderByCreatedAtDesc(studentId);
     }
 
+    public List<Notification> findAll() {
+        return notificationRepository.findAll();
+    }
+
     public Notification markAsRead(Long notificationId) {
         Notification notification = notificationRepository.findById(notificationId)
                 .orElseThrow(() -> new ResourceNotFoundException("Notification not found with id: " + notificationId));

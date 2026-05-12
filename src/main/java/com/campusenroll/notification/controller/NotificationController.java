@@ -34,6 +34,11 @@ public class NotificationController {
         return notificationService.findByStudentId(studentId);
     }
 
+    @GetMapping("/notifications")
+    public List<Notification> getAll() {
+        return notificationService.findAll();
+    }
+
     @PatchMapping("/notifications/{id}/read")
     public ResponseEntity<Notification> markAsRead(@PathVariable Long id) {
         return ResponseEntity.ok(notificationService.markAsRead(id));
